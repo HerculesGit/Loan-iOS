@@ -1,17 +1,14 @@
 //
-//  CustomCell.swift
+//  LoanCell.swift
 //  Loan
 //
-//  Created by Hercules Silva on 05/02/22.
+//  Created by Hercules Silva on 10/02/22.
 //
 
 import UIKit
 
-class CustomCell: UITableViewCell {
-    
-    @IBOutlet weak var loanView: UIView!
-    @IBOutlet weak var checkboxView: UIView!
-    
+class LoanCell: UITableViewCell {
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var createdAtLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
@@ -25,11 +22,6 @@ class CustomCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-        if selected {
-            checkboxView.layer.backgroundColor = UIColor.purple.cgColor
-        } else {
-            checkboxView.layer.backgroundColor = UIColor.blue.cgColor
-        }
     }
-
+    
 }
