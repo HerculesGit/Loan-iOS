@@ -12,3 +12,8 @@ struct K {
     static let loanIdentifierCell = "ReusableLoanView"
     static let loanNibName = "LoanCell"
 }
+
+struct KAssets {
+    static let radioButtonChecked = "radioButtonChecked"
+    static let radioButtonUnchecked = "radioButtonUnchecked"
+}

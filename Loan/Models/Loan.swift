@@ -12,5 +12,5 @@ struct Loan {
     let name: String
     let value: Double
     let createdAt: String
-    let status: Bool
+    var status: Bool
 }

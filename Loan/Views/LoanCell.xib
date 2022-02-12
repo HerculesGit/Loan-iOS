@@ -10,27 +10,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableLoanView" rowHeight="83" id="KGk-i7-Jjw" customClass="LoanCell" customModule="Loan" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableLoanView" rowHeight="83" id="KGk-i7-Jjw" customClass="LoanCell" customModule="Loan" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="403" height="83"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="403" height="83"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="jBw-p5-aXx">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jBw-p5-aXx">
                         <rect key="frame" x="16" y="0.0" width="371" height="83"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="radio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwN-ai-rf9">
-                                <rect key="frame" x="0.0" y="0.0" width="43.5" height="83"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radioButtonChecked" translatesAutoresizingMaskIntoConstraints="NO" id="ycR-ce-lye">
+                                <rect key="frame" x="0.0" y="0.0" width="36" height="83"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="XDE-zh-x16">
-                                <rect key="frame" x="43.5" y="0.0" width="272" height="83"/>
+                                <rect key="frame" x="46" y="0.0" width="216.5" height="83"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zgx-e4-z3s">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="118.5" height="21"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devedor imundo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivZ-qj-DPv">
@@ -46,14 +43,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCR-sC-QWt">
-                                        <rect key="frame" x="0.0" y="62.5" width="240" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="62.5" width="118.5" height="20.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.28627450980000002" green="0.70196078429999997" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oca-jK-aIf">
-                                <rect key="frame" x="315.5" y="0.0" width="55.5" height="83"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oca-jK-aIf">
+                                <rect key="frame" x="272.5" y="0.0" width="98.5" height="83"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -61,7 +57,6 @@
                         </subviews>
                     </stackView>
                 </subviews>
-                <color key="backgroundColor" red="0.28627450980000002" green="0.70196078429999997" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="jBw-p5-aXx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="S6g-1W-YcE"/>
                     <constraint firstAttribute="bottom" secondItem="jBw-p5-aXx" secondAttribute="bottom" id="hbX-09-YZC"/>
@@ -73,12 +68,14 @@
             <connections>
                 <outlet property="createdAtLabel" destination="zTU-zc-XRc" id="YsK-JM-aua"/>
                 <outlet property="nameLabel" destination="ivZ-qj-DPv" id="Cea-oz-8Iq"/>
+                <outlet property="radioButton" destination="ycR-ce-lye" id="fgx-Ld-UGf"/>
                 <outlet property="valueLabel" destination="oca-jK-aIf" id="43Q-Hx-fHl"/>
             </connections>
             <point key="canvasLocation" x="192.0289855072464" y="125.55803571428571"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="radioButtonChecked" width="21" height="21"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
