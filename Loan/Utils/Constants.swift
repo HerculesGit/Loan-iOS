@@ -17,3 +17,7 @@ struct KAssets {
     static let radioButtonChecked = "radioButtonChecked"
     static let radioButtonUnchecked = "radioButtonUnchecked"
 }
+
+struct kNavigation {
+    static let goToCreateLoan = "goToCreateLoan"
+}

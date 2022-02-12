@@ -14,6 +14,7 @@
 		227619AE27B5DC2C00FD73F6 /* OpenLoansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227619AD27B5DC2C00FD73F6 /* OpenLoansViewController.swift */; };
 		227619B127B6B1EF00FD73F6 /* radiobutton_checked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 227619AF27B6B1EF00FD73F6 /* radiobutton_checked.pdf */; };
 		227619B227B6B1EF00FD73F6 /* radiobutton_unchecked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 227619B027B6B1EF00FD73F6 /* radiobutton_unchecked.pdf */; };
+		227619B427B753F100FD73F6 /* backArrow.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 227619B327B753F100FD73F6 /* backArrow.pdf */; };
 		22E15F6F27B03D640088164C /* CreateLoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E15F6E27B03D640088164C /* CreateLoanViewController.swift */; };
 		22F40EAB27AD99DB00369B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F40EAA27AD99DB00369B22 /* AppDelegate.swift */; };
 		22F40EAD27AD99DB00369B22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F40EAC27AD99DB00369B22 /* SceneDelegate.swift */; };
@@ -30,6 +31,7 @@
 		227619AD27B5DC2C00FD73F6 /* OpenLoansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLoansViewController.swift; sourceTree = "<group>"; };
 		227619AF27B6B1EF00FD73F6 /* radiobutton_checked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = radiobutton_checked.pdf; path = Loan/radiobutton_checked.pdf; sourceTree = SOURCE_ROOT; };
 		227619B027B6B1EF00FD73F6 /* radiobutton_unchecked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = radiobutton_unchecked.pdf; path = Loan/radiobutton_unchecked.pdf; sourceTree = SOURCE_ROOT; };
+		227619B327B753F100FD73F6 /* backArrow.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = backArrow.pdf; sourceTree = "<group>"; };
 		22E15F6E27B03D640088164C /* CreateLoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLoanViewController.swift; sourceTree = "<group>"; };
 		22F40EA727AD99DB00369B22 /* Loan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F40EAA27AD99DB00369B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				22F40EB827AD99DB00369B22 /* Info.plist */,
 				227619AF27B6B1EF00FD73F6 /* radiobutton_checked.pdf */,
 				227619B027B6B1EF00FD73F6 /* radiobutton_unchecked.pdf */,
+				227619B327B753F100FD73F6 /* backArrow.pdf */,
 			);
 			path = Loan;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				22F40EB727AD99DB00369B22 /* LaunchScreen.storyboard in Resources */,
 				227619B127B6B1EF00FD73F6 /* radiobutton_checked.pdf in Resources */,
 				227619B227B6B1EF00FD73F6 /* radiobutton_unchecked.pdf in Resources */,
+				227619B427B753F100FD73F6 /* backArrow.pdf in Resources */,
 				22F40EB427AD99DB00369B22 /* Assets.xcassets in Resources */,
 				22F40EB227AD99DB00369B22 /* Main.storyboard in Resources */,
 				227619A627B5D8F600FD73F6 /* LoanCell.xib in Resources */,

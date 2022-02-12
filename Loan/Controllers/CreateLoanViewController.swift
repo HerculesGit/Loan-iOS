@@ -8,13 +8,21 @@
 import UIKit
 
 class CreateLoanViewController: UIViewController {
-
+    
+    @IBOutlet weak var iconBack: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.navigationItem.hidesBackButton = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didIconBackTap(tapGesture:)))
+        iconBack.addGestureRecognizer(tapGesture)
     }
     
+    @objc func didIconBackTap(tapGesture: UITapGestureRecognizer) {
+        self.navigationController?.popViewController(animated: true)
+    }
 
     /*
     // MARK: - Navigation
