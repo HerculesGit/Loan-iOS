@@ -11,6 +11,7 @@ class OpenLoansViewController: UIViewController {
     
     @IBOutlet weak var loanTableView: UITableView!
     
+    @IBOutlet weak var cTabBar: MTabBarView!
     var openloans: [Loan] = [
         Loan(id: "1", name: "Gotinha do devedor", value: 15.0, createdAt: "12/01/2022", status: false),
         Loan(id: "1", name: "Gotinha do devedor", value: 15.0, createdAt: "12/01/2022", status: false),
@@ -31,6 +32,12 @@ class OpenLoansViewController: UIViewController {
         loanTableView.dataSource = self
         
         loanTableView.register(UINib(nibName: K.loanNibName, bundle: nil), forCellReuseIdentifier: K.loanIdentifierCell)
+        
+        let mtabBar = MTabBarView (frame: CGRect(x: 0, y:0, width: cTabBar.bounds.width, height: cTabBar.bounds.height))
+        
+        mtabBar.delegate = self
+        cTabBar.addSubview(mtabBar)
+        //view.addSubview(mtabBar)
     }
 }
 
@@ -59,4 +66,20 @@ extension OpenLoansViewController: UITableViewDataSource {
         loanCell.setLoan(loan: openLoan, indexPath: indexPath)
         return loanCell
     }
+}
+
+extension OpenLoansViewController: MTabBarDelegate {
+    func didAddPressed(_ addButton: UIButton) {
+        print("didAddPressed")
+    }
+    
+    func didFireButtonPressed(_ fireButton: UIButton) {
+        print("didFireButtonPressed")
+    }
+    
+    func didArchiveButtonPressed(_ archiveButton: UIButton) {
+        print("didArchiveButtonPressed")
+    }
+    
+    
 }

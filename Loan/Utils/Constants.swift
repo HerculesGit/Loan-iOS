@@ -16,6 +16,9 @@ struct K {
 struct KAssets {
     static let radioButtonChecked = "radioButtonChecked"
     static let radioButtonUnchecked = "radioButtonUnchecked"
+    
+    static let tabBarIsOpenSelected = "tabBarIsOpenSelected"
+    static let tabBarArchiveSelected = "tabBarArchiveSelected"
 }
 
 struct kNavigation {

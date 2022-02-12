@@ -12,9 +12,10 @@
 		227619A927B5DAF300FD73F6 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227619A827B5DAF300FD73F6 /* Loan.swift */; };
 		227619AB27B5DBDE00FD73F6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227619AA27B5DBDE00FD73F6 /* Constants.swift */; };
 		227619AE27B5DC2C00FD73F6 /* OpenLoansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227619AD27B5DC2C00FD73F6 /* OpenLoansViewController.swift */; };
-		227619B127B6B1EF00FD73F6 /* radiobutton_checked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 227619AF27B6B1EF00FD73F6 /* radiobutton_checked.pdf */; };
-		227619B227B6B1EF00FD73F6 /* radiobutton_unchecked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 227619B027B6B1EF00FD73F6 /* radiobutton_unchecked.pdf */; };
-		227619B427B753F100FD73F6 /* backArrow.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 227619B327B753F100FD73F6 /* backArrow.pdf */; };
+		227619C827B7F56800FD73F6 /* MTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227619C727B7F56800FD73F6 /* MTabBarView.xib */; };
+		227619CA27B7F5A100FD73F6 /* MTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227619C927B7F5A100FD73F6 /* MTabBarView.swift */; };
+		227619CE27B838C000FD73F6 /* MTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227619CD27B838C000FD73F6 /* MTabBarDelegate.swift */; };
+		227619D027B838F000FD73F6 /* MTabBarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227619CF27B838F000FD73F6 /* MTabBarService.swift */; };
 		22E15F6F27B03D640088164C /* CreateLoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E15F6E27B03D640088164C /* CreateLoanViewController.swift */; };
 		22F40EAB27AD99DB00369B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F40EAA27AD99DB00369B22 /* AppDelegate.swift */; };
 		22F40EAD27AD99DB00369B22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F40EAC27AD99DB00369B22 /* SceneDelegate.swift */; };
@@ -29,9 +30,10 @@
 		227619A827B5DAF300FD73F6 /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		227619AA27B5DBDE00FD73F6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		227619AD27B5DC2C00FD73F6 /* OpenLoansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLoansViewController.swift; sourceTree = "<group>"; };
-		227619AF27B6B1EF00FD73F6 /* radiobutton_checked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = radiobutton_checked.pdf; path = Loan/radiobutton_checked.pdf; sourceTree = SOURCE_ROOT; };
-		227619B027B6B1EF00FD73F6 /* radiobutton_unchecked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = radiobutton_unchecked.pdf; path = Loan/radiobutton_unchecked.pdf; sourceTree = SOURCE_ROOT; };
-		227619B327B753F100FD73F6 /* backArrow.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = backArrow.pdf; sourceTree = "<group>"; };
+		227619C727B7F56800FD73F6 /* MTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTabBarView.xib; sourceTree = "<group>"; };
+		227619C927B7F5A100FD73F6 /* MTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTabBarView.swift; sourceTree = "<group>"; };
+		227619CD27B838C000FD73F6 /* MTabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTabBarDelegate.swift; sourceTree = "<group>"; };
+		227619CF27B838F000FD73F6 /* MTabBarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTabBarService.swift; sourceTree = "<group>"; };
 		22E15F6E27B03D640088164C /* CreateLoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLoanViewController.swift; sourceTree = "<group>"; };
 		22F40EA727AD99DB00369B22 /* Loan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F40EAA27AD99DB00369B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,25 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		227619C127B7F3F400FD73F6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				227619C227B7F3FC00FD73F6 /* MTabBarView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		227619C227B7F3FC00FD73F6 /* MTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				227619C727B7F56800FD73F6 /* MTabBarView.xib */,
+				227619C927B7F5A100FD73F6 /* MTabBarView.swift */,
+				227619CD27B838C000FD73F6 /* MTabBarDelegate.swift */,
+				227619CF27B838F000FD73F6 /* MTabBarService.swift */,
+			);
+			path = MTabBarView;
+			sourceTree = "<group>";
+		};
 		22E15F6C27B03CF00088164C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +102,7 @@
 		22E15F6D27B03CFA0088164C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				227619C127B7F3F400FD73F6 /* Components */,
 				22F40EB027AD99DB00369B22 /* Main.storyboard */,
 				227619A327B5D8F600FD73F6 /* LoanCell.swift */,
 				227619A427B5D8F600FD73F6 /* LoanCell.xib */,
@@ -116,9 +138,6 @@
 				22F40EB327AD99DB00369B22 /* Assets.xcassets */,
 				22F40EB527AD99DB00369B22 /* LaunchScreen.storyboard */,
 				22F40EB827AD99DB00369B22 /* Info.plist */,
-				227619AF27B6B1EF00FD73F6 /* radiobutton_checked.pdf */,
-				227619B027B6B1EF00FD73F6 /* radiobutton_unchecked.pdf */,
-				227619B327B753F100FD73F6 /* backArrow.pdf */,
 			);
 			path = Loan;
 			sourceTree = "<group>";
@@ -182,9 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F40EB727AD99DB00369B22 /* LaunchScreen.storyboard in Resources */,
-				227619B127B6B1EF00FD73F6 /* radiobutton_checked.pdf in Resources */,
-				227619B227B6B1EF00FD73F6 /* radiobutton_unchecked.pdf in Resources */,
-				227619B427B753F100FD73F6 /* backArrow.pdf in Resources */,
+				227619C827B7F56800FD73F6 /* MTabBarView.xib in Resources */,
 				22F40EB427AD99DB00369B22 /* Assets.xcassets in Resources */,
 				22F40EB227AD99DB00369B22 /* Main.storyboard in Resources */,
 				227619A627B5D8F600FD73F6 /* LoanCell.xib in Resources */,
@@ -198,6 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227619CA27B7F5A100FD73F6 /* MTabBarView.swift in Sources */,
+				227619D027B838F000FD73F6 /* MTabBarService.swift in Sources */,
 				227619AE27B5DC2C00FD73F6 /* OpenLoansViewController.swift in Sources */,
 				22E15F6F27B03D640088164C /* CreateLoanViewController.swift in Sources */,
 				22F40EAB27AD99DB00369B22 /* AppDelegate.swift in Sources */,
@@ -205,6 +224,7 @@
 				227619A527B5D8F600FD73F6 /* LoanCell.swift in Sources */,
 				22F40EAD27AD99DB00369B22 /* SceneDelegate.swift in Sources */,
 				227619AB27B5DBDE00FD73F6 /* Constants.swift in Sources */,
+				227619CE27B838C000FD73F6 /* MTabBarDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
