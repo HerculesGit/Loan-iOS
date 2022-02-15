@@ -9,9 +9,12 @@ import Foundation
 import UIKit
 
 protocol MTabBarDelegate {
-    func didAddPressed(_ addButton: UIButton)
     
-    func didFireButtonPressed(_ fireButton: UIButton)
+    func getNavController() -> UINavigationController?
     
-    func didArchiveButtonPressed(_ archiveButton: UIButton)
+    func didPressAddButton(_ addButton: UIButton)
+    
+    func didPressFireButton(_ fireButton: UIButton)
+    
+    func didPressArchiveButton(_ archiveButton: UIButton)
 }

@@ -12,6 +12,7 @@ class MTabBarView: UIView {
     @IBOutlet weak var tabBarImageView: UIImageView!
     
     var delegate: MTabBarDelegate?
+    var navigationController: UINavigationController?
     let mTabBarService: MTabBarService = MTabBarService()
     
     /*
@@ -23,19 +24,27 @@ class MTabBarView: UIView {
      */
     
     @IBAction func onAddPressed(_ sender: UIButton) {
-        delegate?.didAddPressed(sender)
+        delegate?.didPressAddButton(sender)
+        
+        navigationController = delegate?.getNavController()
+
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let createLoanViewController =
+            storyBoard.instantiateViewController(withIdentifier: "createLoan") as! CreateLoanViewController
+        
+        navigationController?.pushViewController(createLoanViewController, animated: true)
     }
     
     @IBAction func onFirePressed(_ sender: UIButton) {
         mTabBarService.setIconPressed(name: KAssets.tabBarIsOpenSelected)
         tabBarImageView.image = mTabBarService.getMTabBarImage()
-        delegate?.didFireButtonPressed(sender)
+        delegate?.didPressFireButton(sender)
     }
     
     @IBAction func onArchivePressed(_ sender: UIButton) {
         mTabBarService.setIconPressed(name: KAssets.tabBarArchiveSelected)
         tabBarImageView.image = mTabBarService.getMTabBarImage()
-        delegate?.didArchiveButtonPressed(sender)
+        delegate?.didPressArchiveButton(sender)
     }
     
     override init(frame: CGRect) {

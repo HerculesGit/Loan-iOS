@@ -16,6 +16,12 @@
 		227619CA27B7F5A100FD73F6 /* MTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227619C927B7F5A100FD73F6 /* MTabBarView.swift */; };
 		227619CE27B838C000FD73F6 /* MTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227619CD27B838C000FD73F6 /* MTabBarDelegate.swift */; };
 		227619D027B838F000FD73F6 /* MTabBarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227619CF27B838F000FD73F6 /* MTabBarService.swift */; };
+		22B30F4B27BC330C0062F35B /* EventListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B30F4A27BC330C0062F35B /* EventListener.swift */; };
+		22B30F4D27BC33210062F35B /* MListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B30F4C27BC33210062F35B /* MListener.swift */; };
+		22B30F4F27BC338F0062F35B /* OpenLoansViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B30F4E27BC338F0062F35B /* OpenLoansViewService.swift */; };
+		22C493BB27B9705400E6F2DF /* CreateLoanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C493BA27B9705400E6F2DF /* CreateLoanService.swift */; };
+		22C493BD27B9728800E6F2DF /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C493BC27B9728800E6F2DF /* Validators.swift */; };
+		22C493C127B98AC000E6F2DF /* EventPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C493C027B98AC000E6F2DF /* EventPublisher.swift */; };
 		22E15F6F27B03D640088164C /* CreateLoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E15F6E27B03D640088164C /* CreateLoanViewController.swift */; };
 		22F40EAB27AD99DB00369B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F40EAA27AD99DB00369B22 /* AppDelegate.swift */; };
 		22F40EAD27AD99DB00369B22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F40EAC27AD99DB00369B22 /* SceneDelegate.swift */; };
@@ -34,6 +40,12 @@
 		227619C927B7F5A100FD73F6 /* MTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTabBarView.swift; sourceTree = "<group>"; };
 		227619CD27B838C000FD73F6 /* MTabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTabBarDelegate.swift; sourceTree = "<group>"; };
 		227619CF27B838F000FD73F6 /* MTabBarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTabBarService.swift; sourceTree = "<group>"; };
+		22B30F4A27BC330C0062F35B /* EventListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListener.swift; sourceTree = "<group>"; };
+		22B30F4C27BC33210062F35B /* MListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MListener.swift; sourceTree = "<group>"; };
+		22B30F4E27BC338F0062F35B /* OpenLoansViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLoansViewService.swift; sourceTree = "<group>"; };
+		22C493BA27B9705400E6F2DF /* CreateLoanService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLoanService.swift; sourceTree = "<group>"; };
+		22C493BC27B9728800E6F2DF /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		22C493C027B98AC000E6F2DF /* EventPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPublisher.swift; sourceTree = "<group>"; };
 		22E15F6E27B03D640088164C /* CreateLoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLoanViewController.swift; sourceTree = "<group>"; };
 		22F40EA727AD99DB00369B22 /* Loan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F40EAA27AD99DB00369B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +78,9 @@
 		227619AC27B5DBE500FD73F6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				227619D127B8BF9B00FD73F6 /* EventPublisher */,
 				227619AA27B5DBDE00FD73F6 /* Constants.swift */,
+				22C493BC27B9728800E6F2DF /* Validators.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -90,11 +104,39 @@
 			path = MTabBarView;
 			sourceTree = "<group>";
 		};
-		22E15F6C27B03CF00088164C /* Controllers */ = {
+		227619D127B8BF9B00FD73F6 /* EventPublisher */ = {
+			isa = PBXGroup;
+			children = (
+				22C493C027B98AC000E6F2DF /* EventPublisher.swift */,
+				22B30F4A27BC330C0062F35B /* EventListener.swift */,
+				22B30F4C27BC33210062F35B /* MListener.swift */,
+			);
+			path = EventPublisher;
+			sourceTree = "<group>";
+		};
+		22C493B727B9702B00E6F2DF /* OpenLoans */ = {
 			isa = PBXGroup;
 			children = (
 				227619AD27B5DC2C00FD73F6 /* OpenLoansViewController.swift */,
+				22B30F4E27BC338F0062F35B /* OpenLoansViewService.swift */,
+			);
+			path = OpenLoans;
+			sourceTree = "<group>";
+		};
+		22C493B827B9703800E6F2DF /* CreateLoan */ = {
+			isa = PBXGroup;
+			children = (
 				22E15F6E27B03D640088164C /* CreateLoanViewController.swift */,
+				22C493BA27B9705400E6F2DF /* CreateLoanService.swift */,
+			);
+			path = CreateLoan;
+			sourceTree = "<group>";
+		};
+		22E15F6C27B03CF00088164C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				22C493B827B9703800E6F2DF /* CreateLoan */,
+				22C493B727B9702B00E6F2DF /* OpenLoans */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,13 +257,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B30F4F27BC338F0062F35B /* OpenLoansViewService.swift in Sources */,
 				227619CA27B7F5A100FD73F6 /* MTabBarView.swift in Sources */,
 				227619D027B838F000FD73F6 /* MTabBarService.swift in Sources */,
+				22C493BB27B9705400E6F2DF /* CreateLoanService.swift in Sources */,
 				227619AE27B5DC2C00FD73F6 /* OpenLoansViewController.swift in Sources */,
 				22E15F6F27B03D640088164C /* CreateLoanViewController.swift in Sources */,
 				22F40EAB27AD99DB00369B22 /* AppDelegate.swift in Sources */,
+				22B30F4D27BC33210062F35B /* MListener.swift in Sources */,
 				227619A927B5DAF300FD73F6 /* Loan.swift in Sources */,
 				227619A527B5D8F600FD73F6 /* LoanCell.swift in Sources */,
+				22C493C127B98AC000E6F2DF /* EventPublisher.swift in Sources */,
+				22C493BD27B9728800E6F2DF /* Validators.swift in Sources */,
+				22B30F4B27BC330C0062F35B /* EventListener.swift in Sources */,
 				22F40EAD27AD99DB00369B22 /* SceneDelegate.swift in Sources */,
 				227619AB27B5DBDE00FD73F6 /* Constants.swift in Sources */,
 				227619CE27B838C000FD73F6 /* MTabBarDelegate.swift in Sources */,

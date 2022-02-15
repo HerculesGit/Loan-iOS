@@ -21,6 +21,11 @@ struct KAssets {
     static let tabBarArchiveSelected = "tabBarArchiveSelected"
 }
 
+struct KEventTypes {
+    static let didCreateLoan = "didCreateLoanEvent"
+}
+
+
 struct kNavigation {
     static let goToCreateLoan = "goToCreateLoan"
 }

@@ -52,15 +52,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00y-2k-bL7">
-                                <rect key="frame" x="175" y="820" width="65" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="CRIAR"/>
-                                <connections>
-                                    <segue destination="Eo4-zg-Ucd" kind="show" identifier="goToCreateLoan" id="euX-Px-7s3"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xae-4E-6Hf">
                                 <rect key="frame" x="0.0" y="768" width="414" height="120"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -101,19 +92,19 @@
         <!--Create Loan View Controller-->
         <scene sceneID="NhR-UF-QEp">
             <objects>
-                <viewController id="Eo4-zg-Ucd" customClass="CreateLoanViewController" customModule="Loan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createLoan" id="Eo4-zg-Ucd" customClass="CreateLoanViewController" customModule="Loan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YUP-Be-mzG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criar dívida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqE-Op-15p">
-                                <rect key="frame" x="20" y="171" width="394" height="26.5"/>
+                                <rect key="frame" x="20" y="127" width="394" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ITt-Nt-N4p">
-                                <rect key="frame" x="20" y="213.5" width="374" height="110"/>
+                                <rect key="frame" x="20" y="169.5" width="374" height="110"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1I7-SP-IgL" userLabel="NameTextField">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -122,6 +113,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onNameChanged:" destination="Eo4-zg-Ucd" eventType="editingDidEnd" id="rbs-Kf-82d"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gT5-7P-2Yc" userLabel="ValueTextField">
                                         <rect key="frame" x="0.0" y="60" width="374" height="50"/>
@@ -130,6 +124,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onValueChanged:" destination="Eo4-zg-Ucd" eventType="editingChanged" id="sDs-jO-9cw"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -144,9 +141,12 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="24"/>
                                     <color key="baseBackgroundColor" red="0.43921568630000002" green="0.34509803919999998" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didPressCreateButton:" destination="Eo4-zg-Ucd" eventType="touchUpInside" id="8Yv-d8-d0T"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconBackArrow" translatesAutoresizingMaskIntoConstraints="NO" id="heR-d6-Reu" userLabel="BackArrowImageView">
-                                <rect key="frame" x="20" y="88" width="47" height="47"/>
+                                <rect key="frame" x="20" y="44" width="47" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="osl-xF-2hi"/>
                                     <constraint firstAttribute="width" constant="47" id="pja-yp-Z95"/>
@@ -171,7 +171,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="hQN-rj-GFH"/>
                     <connections>
+                        <outlet property="createButton" destination="hQo-OW-hgC" id="JND-EG-Vba"/>
                         <outlet property="iconBack" destination="heR-d6-Reu" id="ypY-J3-2a3"/>
+                        <outlet property="nameTextField" destination="1I7-SP-IgL" id="w2n-ff-tBi"/>
+                        <outlet property="valueTextField" destination="gT5-7P-2Yc" id="T8h-AG-40s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Un9-Xg-By2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

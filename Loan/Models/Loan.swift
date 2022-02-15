@@ -8,9 +8,9 @@
 import Foundation
 
 struct Loan {
-    let id: String
-    let name: String
-    let value: Double
-    let createdAt: String
+    var id: String
+    var name: String
+    var value: Double
+    var createdAt: String
     var status: Bool
 }
